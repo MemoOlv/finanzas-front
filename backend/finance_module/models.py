@@ -1,5 +1,5 @@
 from sqlalchemy import Column, Integer, String, Float
-from database import Base
+from finance_module.database import Base
 
 class Record(Base):
     __tablename__ = "records"

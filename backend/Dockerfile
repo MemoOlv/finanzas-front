@@ -1,6 +1,6 @@
 FROM python:3
 
-WORKDIR /workdir
+WORKDIR /app
 COPY . .
 
 RUN pip install --upgrade pip && pip install \
@@ -13,3 +13,5 @@ RUN pip install --upgrade pip && pip install \
     uvicorn
 
 RUN make install
+
+CMD ["uvicorn", "finance_module.main:app", "--host", "0.0.0.0", "--port", "8000"]

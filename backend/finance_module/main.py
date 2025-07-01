@@ -1,8 +1,8 @@
 from fastapi import FastAPI, Depends
 from pydantic import BaseModel
 from sqlalchemy.orm import Session
-from database import SessionLocal, engine, Base
-from models import Record
+from finance_module.database import SessionLocal, engine, Base
+from finance_module.models import Record
 
 app = FastAPI()
 Base.metadata.create_all(bind=engine)
